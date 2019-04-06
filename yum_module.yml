@@ -1,0 +1,8 @@
+---
+ - hosts: web
+   become: yes
+   tasks:
+    - name: my first playbook
+      yum:
+        name: elinks
+        state: present
