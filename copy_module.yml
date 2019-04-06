@@ -1,0 +1,8 @@
+---
+ - hosts: dev
+   become: yes
+   tasks:
+    - name: my copy module
+      copy:
+         src: /root/playbooks/yum.yml
+         dest: /root/
