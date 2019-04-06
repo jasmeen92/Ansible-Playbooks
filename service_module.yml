@@ -1,0 +1,8 @@
+---
+ - hosts: web
+   gather_facts: false
+   tasks:
+    - name: service module
+      service:
+        name: httpd
+        state: stopped 
