@@ -1,0 +1,11 @@
+---
+- hosts: app
+  tasks:
+   - name: install packages
+     yum:
+      name: {{package}}
+      state: latest
+     with_items:
+      - git
+      - nginx
+      - docker
