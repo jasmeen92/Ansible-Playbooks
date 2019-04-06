@@ -1,0 +1,10 @@
+---
+ - hosts: app
+   tasks:
+     - name: create dir using file module
+       file:
+          dest: new3/test.text
+          mode: 777
+          owner: jass
+          group: jass
+          state: directory
