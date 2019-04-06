@@ -2,10 +2,9 @@
 - hosts: app
   tasks:
    - name: install packages
-     yum:
-      name: {{package}}
-      state: latest
+     file:
+      name: "{{ item }}"
+      state: touch
      with_items:
-      - git
-      - nginx
-      - docker
+     - test1
+     - docker
